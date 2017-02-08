@@ -15,7 +15,6 @@ const middleware = require('./middleware');
 const services = require('./services');
 
 const app = feathers();
-
 app.configure(configuration(path.join(__dirname, '..')));
 
 app.use(compress())
