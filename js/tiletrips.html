@@ -98,6 +98,25 @@
         background-color: #4CAF50;
     }
 
+	.tile {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card-2 {
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	}
+	.card {
+		background: #fff;
+		border-radius: 2px;
+		display: inline-block;
+		height: 300px;
+		margin: 1rem;
+		position: relative;
+		width: 300px;
+	}
+
+
   </style>
 
 
@@ -111,62 +130,16 @@
       <li><a class="active" href="tiletrips.html">Home</a></li>
       <li><a href="addtrip.html">Add Trip</a></li>
     </ul>
-    <div class="box">
-      <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/7.jpg" />
-        <div class="titleBox">Butterfly</div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/1.jpg" />
-        <div class="titleBox">An old greenhouse</div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/2.jpg" />
-        <div class="titleBox">Purple wildflowers</div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/3.jpg" />
-        <div class="titleBox">A birdfeeder</div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/10.jpg" />
-        <div class="titleBox">Crocus close-up</div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/4.jpg" />
-        <div class="titleBox">The garden shop</div>
-      </div>
-    </div>
+	
+	<div class="tile-container">
+		<!-- Will contian all the data -->	
+	</div>
 
   </div>
   <!-- /#wrap -->
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
-  <script type="text/javascript">
-  $(function(){
-     // See if this is a touch device
-     if ('ontouchstart' in window)
-     {
-        // Set the correct body class
-        $('body').removeClass('no-touch').addClass('touch');
-
-        // Add the touch toggle to show text
-        $('div.boxInner img').click(function(){
-           $(this).closest('.boxInner').toggleClass('touchFocus');
-        });
-     }
-  });
-  </script>
+  <script src="./tileTrips.js"></script>
 
 </body>
 </html>

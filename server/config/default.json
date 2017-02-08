@@ -1,0 +1,13 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "sqlite": "../data/travellogger.sqlite",
+  "public": "../public/",
+  "auth": {
+    "idField": "id",
+    "token": {
+      "secret": "ed3eqbxOHZCL6gkIh3ref0I35opiwq0u1c+tqFtTU9qOYxml+JEQl0MCuMC1eL6NB7t25yFrikN6/LEGdllyvg=="
+    },
+    "local": {}
+  }
+}

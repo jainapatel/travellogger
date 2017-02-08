@@ -1,5 +1,5 @@
+var markers = []
 function myMap() {
-	console.log(google.maps)
 	var mapCanvas = document.getElementById("map");
 	var mapOptions = {
 		center: new google.maps.LatLng(51.5, -0.2),
@@ -14,7 +14,6 @@ function myMap() {
 	map.addListener('bounds_changed', function() {
 		searchBox.setBounds(map.getBounds());
 	});
-	var markers = [];
 
 	// Listen for the event fired when the user selects a prediction and retrieve
 	// more details for that place.
@@ -63,6 +62,17 @@ function myMap() {
 		});
 		map.fitBounds(bounds);
 	});
+}
 
+function submitForm() {
+	var name = $("#name").val()
+	var startDate = $("#startDate").val() 
+	var endDate = $("#endDate").val() 
+	var highlights = $("#highlights").val() 
+	var loc = markers[0]
+	var data = {name, startDate, endDate, highlights, latitude: loc.position.lat(), longitude: loc.position.lng()}
 
+	$.post('http://localhost:3030/trips', data, (resp, status, xhr) => {
+		console.log(resp)
+	})
 }
